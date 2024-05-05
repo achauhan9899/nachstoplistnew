@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Google Sheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <form method="post" action="https://script.google.com/macros/s/AKfycbx3e_-O4W_RGhIPVOiffXiYukwFlvPclVdsUtHKNPXzgfOHWbHw95mXTUjGx5AW8qVc/exec" name="contact-form" id="msform">
+      <fieldset class="active">
+        <h2 class="fs-title">NACH STOP LIST</h2>
+        <h3 class="fs-subtitle">Enter the File Number</h3>
+        <input type="text" name="file-number" placeholder="FILE NUMBER" id="fileNumber">
+        <button type="button" onclick="fetchDetails()" class="next action-button">Next</button>
+        <div class="loader" style="display: none;" id="fetchLoader"></div>
+        <div class="error" id="message" style="display: none;">Please enter the number correctly</div>
+      </fieldset>
+      <fieldset style="display: none;">
+        <h2 class="fs-title">Verify Details</h2>
+        <input type="text" name="customer-name" placeholder="CUSTOMER NAME" id="customerName" readonly>
+        <input type="text" name="vehicle-number" placeholder="VEHICLE NUMBER" id="vehicleNumber" readonly>
+        <input type="text" name="vehicle-model" placeholder="VEHICLE MODEL" id="vehicleModel" readonly>
+        <input type="submit" value="Submit" id="submit" class="submit action-button">
+        <div class="loader" style="display: none;" id="submitLoader"></div>
+      </fieldset>
+    </form>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="Google Sheet.js"></script>
+</body>
+</html>

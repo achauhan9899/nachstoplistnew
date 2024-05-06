@@ -71,4 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
   });
+
+  function prevbtn(){
+    const current_fs = document.querySelector('fieldset.active');
+    const prev_fs = current_fs.previousElementSibling;
+
+    current_fs.classList.remove('active');
+          current_fs.style.display = "none";
+          current_fs.style.transform = 'translateX(-100%)'; // Slide out to the left
+          prev_fs.classList.add('active');
+          prev_fs.style.display = "block";
+          prev_fs.style.transform = 'translateX(0)';
+  }
   
